@@ -1,10 +1,24 @@
 export default function Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 via-indigo-800 to-pink-500 text-white font-sans">
-      <h1 className="text-6xl font-bold tracking-tighter mb-4 drop-shadow-lg">
+    <main style={{ 
+      minHeight: '100vh', 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      background: 'linear-gradient(135deg, #4c1d95, #312e81, #e11d48)', 
+      color: 'white', 
+      fontFamily: 'sans-serif' 
+    }}>
+      <h1 style={{ fontSize: '3.75rem', fontWeight: 'bold', marginBottom: '1rem' }}>
         🎯 Goods Hunter
       </h1>
-      <p className="text-xl opacity-90 backdrop-blur-sm bg-white/10 px-6 py-2 rounded-full">
+      <p style={{ 
+        padding: '0.5rem 1.5rem', 
+        backgroundColor: 'rgba(255, 255, 255, 0.1)', 
+        backdropFilter: 'blur(4px)', 
+        borderRadius: '9999px' 
+      }}>
         당신의 보물을 찾을 준비가 되셨나요?
       </p>
     </main>
