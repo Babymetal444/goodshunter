@@ -1,8 +1,12 @@
 export default function Page() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column', fontFamily: 'sans-serif' }}>
-      <h1>🎯 Goods Hunter 🎯</h1>
-      <p>드디어 내 컴퓨터에서 웹 서버가 정상 작동합니다!</p>
-    </div>
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-900 via-indigo-800 to-pink-500 text-white font-sans">
+      <h1 className="text-6xl font-bold tracking-tighter mb-4 drop-shadow-lg">
+        🎯 Goods Hunter
+      </h1>
+      <p className="text-xl opacity-90 backdrop-blur-sm bg-white/10 px-6 py-2 rounded-full">
+        당신의 보물을 찾을 준비가 되셨나요?
+      </p>
+    </main>
   );
 }
