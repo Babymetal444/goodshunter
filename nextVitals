@@ -1,0 +1,22 @@
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
+
+/**
+ * 굿즈 헌터(Goods Hunter) 프로젝트 전용 ESLint 문법 검사 설정
+ * Next.js와 TypeScript 환경에서 코딩 오타 및 오류를 실시간으로 잡아줍니다.
+ */
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  
+  // 빌드 결과물이나 환경설정 파일처럼 문법 검사가 필요 없는 폴더/파일들은 감시 대상에서 제외합니다.
+  globalIgnores([
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
+]);
+
+export default eslintConfig;
